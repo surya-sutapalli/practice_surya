@@ -1,55 +1,33 @@
+//Question number-3.
 import java.util.*;
-
-
-public class UserMainCode3 {
-	public static int validatepassword(String s)
+public class UserMainCode3 
+{
+	public static int getLowest(HashMap<Integer,Integer> h1) 
 	{
-		char ch ;
-		int len=s.length();
-		int digitcond=0;
-		int spclcond=0;
-		if(len>=6&&len<=20)
+		ArrayList<Integer> arraylist = new ArrayList<Integer>();
+		int temp = 0;
+		Iterator<Integer> itr = h1.keySet().iterator();
+		while (itr.hasNext()) 
 		{
-		for(int i=0; i<s.length(); i++) {
-			ch = s.charAt(i);
-			if(Character.isDigit(ch)) {
-				digitcond=1;
-				break;
-			}
+			int value = itr.next();
+			arraylist.add(h1.get(value));
 		}
-			if(s.contains("@")||s.contains("#")||s.contains("$"))
-			{
-				spclcond=1;
-			}
-			if(digitcond==1&&spclcond==1)
-			{
-				return 1;
-			}
-			
-
-		}
-		else
+		Collections.sort(arraylist);
+		temp = arraylist.get(0) + arraylist.get(1) + arraylist.get(2);
+		return temp;
+	}
+	public static void main(String args[])
+	{
+		Scanner scan = new Scanner(System.in);
+		//System.out.println("Enter the size :");
+		int n = scan.nextInt();
+		HashMap<Integer,Integer> hashmap = new HashMap<Integer,Integer>();
+		for (int i = 1; i <= n; i++) 
 		{
-			return 0;
+			hashmap.put(scan.nextInt(), scan.nextInt());
 		}
-		
-		
-		return 0;
-		
+		System.out.println("Output "+getLowest(hashmap));
+		scan.close();
 	}
 
-	public static void main(String[] args) {
-		System.out.println("Enter string");
-		Scanner sc=new Scanner(System.in);
-		String s=sc.nextLine();
-		int res=UserMainCode3.validatepassword(s);
-		if(res==1)
-		{
-			System.out.println("valid password");
-		}
-		else
-		{
-			System.out.println("invalid password");
-		}
-	}
 }
