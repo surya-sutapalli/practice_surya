@@ -1,0 +1,31 @@
+Given a method with a password in string format as input. Write code 
+to validate the password using following rules:
+ 
+- Must contain at least one digit
+- Must contain at least one of the following special characters @, #, $
+# Length should be between 6 to 20 characters.
+ 
+Include a class UserMainCode with a static method validatePassword which
+accepts a password string as input.
+
+If the password is as per the given rules return 1 else return -1.
+If the return value is 1 then print valid password else print as invalid 
+password.
+
+Create a Main class which gets string as an input and call the static 
+method validatePassword present in the UserMainCode.
+ 
+Input and Output Format:
+Input is a string .
+Output is a string .
+
+ 
+Sample Input 1:
+%Dhoom%
+Sample Output 1:
+Invalid password
+ 
+Sample Input 2:
+#@6Don
+Sample Output 2:
+Valid password

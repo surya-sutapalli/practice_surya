@@ -1,0 +1,41 @@
+A Company wants to automate its payroll process. You have been assigned 
+as the programmer to build this package. You would like to showcase your 
+skills by creating a quick prototype. The prototype consists of the 
+following steps:
+1.Read Employee details from the User. The details would include id, 
+designation and salary in the given order. The datatype for id is integer
+, designation is string and salary is integer.
+2.You decide to build two hashmaps. The first hashmap contains 
+employee id as key and designation as value, and the second hashmap 
+contains same employee ids as key and salary as value.
+3.The company decides to hike the salary of managers by 5000. 
+You decide to write a function increaseSalaries which takes the above 
+hashmaps as input and returns a hashmap with only managers id and their 
+increased salary as output. Include this function in class UserMainCode.
+
+ 
+Create a Class Main which would be used to read employee details in 
+step 1 and build the two hashmaps. Call the static method present in 
+UserMainCode.
+
+Input and Output Format:
+Input consists of employee details. The first number indicates the size 
+of the employees. The next three values indicate the employee id, 
+employee designation and employee salary.
+
+Output consists of a single string.
+
+Refer sample output for formatting specifications.
+Sample Input 1:
+2
+2
+programmer
+3000
+8
+manager
+50000
+
+ 
+Sample Output 1:
+8
+55000

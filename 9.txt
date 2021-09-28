@@ -1,0 +1,38 @@
+Given an int array and a number as input, 
+write a program to add all the elements in the array greater than 
+the given number. Finally reverse the digits of the obtained sum 
+and print it.
+ 
+Include a class UserMainCode with a static method “addAndReverse” 
+that accepts 2 arguments and returns an integer.The first argument 
+corresponds to the integer array and the second argument corresponds 
+to the number.
+ 
+Create a class Main which would get the required input and call the 
+static method addAndReverse present in the UserMainCode.
+ 
+Example:
+Input Array = {10,15,20,25,30,100}
+Number = 15
+sum = 20 + 25 + 30 + 100 = 175
+output = 571
+ 
+Input and Output Format:
+The first line of the input consists of an integer that corresponds to the number of elements in the array.
+The next n lines of the input consists of integers that correspond to the elements in the array.
+The last line of the input consists of an integer that corresponds to the number.
+ 
+Output consists of a single integer.
+ 
+Sample Input
+6
+10
+15
+20
+25
+30
+100
+15
+ 
+Sample Output
+571

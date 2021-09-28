@@ -1,0 +1,23 @@
+Write a program to check if the first word and the last word in 
+the input string match. 
+
+Include a class UserMainCode with a static method “check” that accepts 
+a string argument and returns an int. If the first word and the last word 
+in the string match, the method returns the number of characters in the
+word. Else the method returns the sum of the number of characters in the 
+first word and last word.
+
+Create a class Main which would get the input as a String and call the static method check present in the UserMainCode.
+Input and Output Format:
+Input consists of a string.
+Output is an integer.
+
+Sample Input 1:
+how are you you are how
+Sample Output 1:
+3
+
+Sample Input 2:
+how is your child
+Sample Output 2:
+8

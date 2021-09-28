@@ -1,0 +1,4 @@
+Create a class Bank having accId,accName,accBank,accBalance
+
+Create ArrayList of 5 Bank objects and display the records sorting by
+accBalance using Comparator
