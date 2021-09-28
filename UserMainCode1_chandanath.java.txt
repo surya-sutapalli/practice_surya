@@ -1,0 +1,41 @@
+package javatest;
+import java.util.*;
+public class UserMainCode {
+	String str;
+	public static int Check(String str)
+	{
+		List<String> l=new ArrayList<String>();
+		StringTokenizer t=new StringTokenizer(str," ");
+		while(t.hasMoreTokens())
+		{
+			String s2=t.nextToken();
+			l.add(s2);
+		}
+		String s3=l.get(0);
+		String s4=l.get(l.size()-1);
+		if(s3.equals(s4))
+		{
+			int n=s3.length();
+			return n;
+		}
+		else
+		{
+			int n1=s3.length();
+			int n2=s4.length();
+			int sum=n1+n2;
+			return sum;
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+		UserMainCode m=new UserMainCode();
+		System.out.println("Enter a string");
+		String s1=sc.nextLine();
+		System.out.println(m.Check(s1));
+
+	}
+
+}
