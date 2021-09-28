@@ -1,19 +1,26 @@
-package AbhishekSingh;
-//2
-public class UserMainCode2
-{
-	public static void formNewWord(String str,int pnum) 
-	{
+	
+public class UserMainCode2 {
+	public static int getSumOfEvenNumber(int n) {
+		int sum=0;
+		String s = Integer.toString(n);
+		int arr[] = new int[s.length()];
+		for(int i=0;i<s.length();i++) {
+			arr[i]= s.charAt(i)-'0';
+		}
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i]%2==0) {
+				
+				sum= sum+ (arr[i]*arr[i]);
+			}
+		}
+		return sum;
+		
+	}
 
-		int l=str.length();
-		if(l%2==0 && l>=2*pnum) {
-			String str1=str.substring(0, pnum);
-			String str2=str.substring(l-pnum, l);
-			System.out.println(str1+str2);
-		}
-		else {
-			System.out.println("Invalid Input");
-		}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(UserMainCode2.getSumOfEvenNumber(56895));
+
 	}
 
 }
