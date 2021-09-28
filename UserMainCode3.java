@@ -1,41 +1,55 @@
-//Problem 9.txt
-import java.util.Scanner;
-public class UserMainCode3 {	
-		public static int addAndReverse(int arr[],int key)
-		{
-			int sum=0,rev=0;
-			for(int i=0;i<arr.length;i++)
-			{
-				if(arr[i]>key)
-					sum+=arr[i];
-			}
-			//System.out.println(sum);
-			while(sum!=0)
-			{
-				int r=sum%10;
-				rev=(rev*10)+r;
-				sum/=10;
-			}
-		return rev;
-		}
-			public static void main(String[] args) {
-		    Scanner sc= new Scanner(System.in);
-		    System.out.println("Enter no.of.digits");
-		    int n=sc.nextInt();
-		    int a[]= new int[n];
-		    for(int i=0;i<n;i++)
-		    {
-		    	System.out.println("Enter array elements");
-		    	a[i]=sc.nextInt();
-		    }
-		    System.out.println("Enter key element");
-		    int key=sc.nextInt();
-		    int result=UserMainCode3.addAndReverse(a,key);
-		    System.out.println("reverse of sum: "+result);
-		    sc.close();
-		    
-			}
+import java.util.*;
 
+
+public class UserMainCode3 {
+	public static int validatepassword(String s)
+	{
+		char ch ;
+		int len=s.length();
+		int digitcond=0;
+		int spclcond=0;
+		if(len>=6&&len<=20)
+		{
+		for(int i=0; i<s.length(); i++) {
+			ch = s.charAt(i);
+			if(Character.isDigit(ch)) {
+				digitcond=1;
+				break;
+			}
+		}
+			if(s.contains("@")||s.contains("#")||s.contains("$"))
+			{
+				spclcond=1;
+			}
+			if(digitcond==1&&spclcond==1)
+			{
+				return 1;
+			}
+			
+
+		}
+		else
+		{
+			return 0;
+		}
+		
+		
+		return 0;
+		
 	}
 
-
+	public static void main(String[] args) {
+		System.out.println("Enter string");
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		int res=UserMainCode3.validatepassword(s);
+		if(res==1)
+		{
+			System.out.println("valid password");
+		}
+		else
+		{
+			System.out.println("invalid password");
+		}
+	}
+}
