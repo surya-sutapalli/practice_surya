@@ -1,23 +1,46 @@
+import java.util.Scanner;
 
 public class UserMainCode1 {
-	public static String longestWord(String s) {
-		String[] str = s.split(" ");
-		String max=null;
-		for(int i=0;i<str.length-1;i++) {
-			if(str[i].length()> str[i+1].length())
-				max = str[i];
-			else if(str[i].length()==str[i+1].length())
-				max=str[i];
-			else
-				max=str[i+1];
+	public static int addandreverse(int brr[],int n2)
+	{
+		int sum=0;
+		int rev=0;
+		for(int num:brr)
+		{
+			if(num>n2)
+			{
+				sum+=num;
+			}
 		}
-		return max;
+		System.out.println(sum);
+				
+				
+			while(sum!=0)
+			{
+				int rem=sum%10;
+			    rev=rev*10+rem;
+				sum=sum/10;
+			}
+			return rev;
+			
 	}
 
 	public static void main(String[] args) {
-		System.out.println(UserMainCode1.longestWord("Welcome to the world of Programming"));
-		System.out.println(UserMainCode1.longestWord("abc def"));
+		Scanner sc =new Scanner(System.in);
 		
+		System.out.println("Enter number of elements in an array:");
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		System.out.println("Enter the elements:");
+		for(int i=0;i<n;i++)
+		{
+			 arr[i]=sc.nextInt();
+		}
+		System.out.println("Enter the element:");
+		int n2=sc.nextInt();
+		UserMainCode1 obj=new UserMainCode1();
+		System.out.println(obj.addandreverse(arr, n2));
+	
 
 	}
 
