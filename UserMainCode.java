@@ -1,34 +1,43 @@
+package Assesment;
 import java.util.Scanner;
-
-public class UserMainCode 
-{
-	static String getLargestWord(String s)
+public class UserMainCode {
+	public static int addAndReverse(int crr[],int x)
 	{
-		String crr[] = s.split(" ");
-		String largest = crr[0];
-		for(int i=1; i<crr.length; i++)
+		int s=0,r;
+		for(int i=0;i<crr.length;i++)
 		{
-			String s1 = crr[i];
-			if (s1.length()>largest.length())
-			{
-				largest = s1;
-			}
-			else if(s1.length()==largest.length())
-			{
-				largest = largest;
-			}
+			if(crr[i]>x)
+				s+=crr[i];
 		}
-		return largest;	
+		System.out.println(s);
+		int org=s,s1=0;
+		while(s!=0)
+		{
+			r=s%10;
+			s1=s1*10+r;
+			s/=10;
+			
+		}
+		return s1;
 	}
 
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter number of elements that  in to array");
+		int num = sc.nextInt();
+		int brr[]=new int[num];
+		System.out.println("Enter element");
+	
+		for(int i=0;i<num;i++)
+		{
+			brr[i]=sc.nextInt();
+			
+		}
+		System.out.println("Enter element for compare");
+		int o=sc.nextInt();
+		
+		System.out.println(UserMainCode.addAndReverse(brr,o));
 
-	public static void main(String[] args)
-	{
-		String s;
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the String");
-		s= sc.nextLine();
-		UserMainCode obj = new UserMainCode();
-		System.out.println(obj.getLargestWord(s));
 	}
+
 }
