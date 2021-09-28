@@ -1,32 +1,24 @@
-import java.util.*;
+
 public class UserMainCode1 {
-	
-   static String getLargestWord(String s)
-   {
-	   int lar=0;
-	   String[] comp=s.split(" ");
-	   for(int i=0;i<comp.length;i++)
-	   {
-		   for(int j=i+1;i<comp.length;i++)
-		   if(comp[i].length()>comp[j].length())
-		 {
-			 lar=i;
-		 }
-	   }
-	  
-	   
-	   
-	   
-	   return comp[lar];
-   }
+	public static String longestWord(String s) {
+		String[] str = s.split(" ");
+		String max=null;
+		for(int i=0;i<str.length-1;i++) {
+			if(str[i].length()> str[i+1].length())
+				max = str[i];
+			else if(str[i].length()==str[i+1].length())
+				max=str[i];
+			else
+				max=str[i+1];
+		}
+		return max;
+	}
+
 	public static void main(String[] args) {
-		String s;
-		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter a Sentence");
-		s=sc.nextLine();
+		System.out.println(UserMainCode1.longestWord("Welcome to the world of Programming"));
+		System.out.println(UserMainCode1.longestWord("abc def"));
 		
-		String lar=UserMainCode1.getLargestWord(s);
-		System.out.println(lar);
+
 	}
 
 }
