@@ -1,26 +1,30 @@
-	
-public class UserMainCode2 {
-	public static int getSumOfEvenNumber(int n) {
-		int sum=0;
-		String s = Integer.toString(n);
-		int arr[] = new int[s.length()];
-		for(int i=0;i<s.length();i++) {
-			arr[i]= s.charAt(i)-'0';
-		}
-		for (int i = 0; i < arr.length; i++) {
-			if(arr[i]%2==0) {
-				
-				sum= sum+ (arr[i]*arr[i]);
-			}
-		}
-		return sum;
-		
-	}
+import java.util.Scanner;
+
+public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println(UserMainCode2.getSumOfEvenNumber(56895));
-
+		Scanner sc = new Scanner(System.in);
+		String s1 = sc.nextLine();
+		int n = UserMainCode.validatePassword(s1);
+		if(n==1){
+			System.out.println("Valid password");
+		}else
+		{
+			System.out.println("Invalid password");
+		}
 	}
 
+}
+class UserMainCode
+{
+	public static int validatePassword(String password){
+		if(password.matches(".*[0-9]{1,}.*") && password.matches(".*[@#$]{1,}.*") && password.length()>=5 && password.length()<=20)
+		{
+			return 1;
+		}
+		else
+		{
+			return -1;
+		}
+	}
 }
