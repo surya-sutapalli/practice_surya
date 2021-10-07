@@ -32,8 +32,8 @@ public class AditiiSQL_1
             }
             System.out.println("Enter bank Branch city : ");
             String city = sc.next();
-            s.execute("insert into Test values("+id+",'"+name+"','"+bank+"',"+balance+",'"+city+"')");
-            ResultSet rs =s.executeQuery("select * from test");
+            s.execute("insert into bank values("+id+",'"+name+"','"+bank+"',"+balance+",'"+city+"')");
+            ResultSet rs =s.executeQuery("select * from bank");
             while(rs.next())
             {
                 System.out.println(rs.getInt(1)+ "--" +rs.getString(2)+"--"+rs.getString(3)+"--"+rs.getInt(4)+"--"+rs.getString(5));
