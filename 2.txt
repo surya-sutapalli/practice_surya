@@ -1,30 +1,18 @@
-Write a program to read a string and a positive integer n as input 
-and construct a string with first n and last n characters in the given 
-string.
- 
-Include a class UserMainCode with a static method formNewWord which 
-accepts a string and positive integer .
- 
-The return type of the output should be a string (value) of first n 
-character and last n character.
- 
-Create a class Main which would get the input as a string and integer 
-n and call the static methodformNewWord present in the UserMainCode.
- 
-Input and Output Format:
-Input consists of a string of even length.
-Output is a string .
-Note: The given string length must be >=2n.
-Refer sample output for formatting specifications.
- 
-Sample Input 1:
-California
-3
-Sample Output 1:
-Calnia
- 
-Sample Input 2:
-this
-1
-Sample Output 2:
-Ts
+create a table bank
+accid
+accname
+accbank
+accbalance
+accbranchcity
+
+insert 10 records into bank table one after another manually
+1.accbank should be hdfc or axis or icici 
+2.accbalance should not be negative or zero
+
+write a program to perform following operations
+
+1.Select records by city
+2.Select records by bank
+Please select option:
+
+

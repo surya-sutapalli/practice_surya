@@ -1,25 +1,11 @@
-Write a Program which finds the longest word from a sentence. 
-Your program should read a sentence as input from user and return 
-the longest word. In case there are two words of maximum length 
-return the word which comes first in the sentence.
+create a table bank
+accid
+accname
+accbank
+accbalance
+accbranchcity
 
-Include a class UserMainCode with a static method getLargestWord which 
-accepts a string The return type is the longest word of type string.
-Create a Class Main which would be used to accept two Input strings and
-call the static method present in UserMainCode.
-
-Input and Output Format:
-Input consists of a string with maximum size of 100 characters.
-Output consists of a single string.
-
-Refer sample output for formatting specifications.
-
-Sample Input 1:
-Welcome to the world of Programming
-Sample Output 1:
-Programming
-
-Sample Input 2:
-ABC DEF
-Sample Output 2:
-ABC
+write a program to insert 10 records into bank table one after another
+1.accbank should be hdfc or axis or icici 
+2.accbalance should not be negative or zero
+3.accept 10 records data using Scanner
