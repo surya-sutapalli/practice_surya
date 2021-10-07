@@ -1,0 +1,70 @@
+package com.nandy.oracle;
+import java.sql.*;
+import java.util.Scanner;
+import java.io.*;	
+class Record
+{
+	public void getRecords(Statement s,Connection c) throws SQLException,ClassNotFoundException
+	{
+		System.out.println("1.Select records by City");
+		System.out.println("2.Select records by Bank");
+		System.out.println("Please Select an option: ");
+		Scanner sc=new Scanner(System.in);
+		int option=sc.nextInt();
+		if(option==1)
+		{
+			System.out.println("Enter city name: ");
+		     String city=sc.next();
+		     ResultSet rs=s.executeQuery("select * from bank where accbranchcity='"+city+"'");
+			while(rs.next())
+			{
+
+				System.out.println(rs.getInt(1)+"--"+rs.getString(2)+"--"+rs.getString(3)+"--"+rs.getInt(4)+"--"+rs.getString(5));
+				
+                        }
+		}
+		else if(option==2)
+		{
+			System.out.println("Enter bank name: ");
+	    	 String bank=sc.next();
+	    	 ResultSet rs1=s.executeQuery("select * from bank where accbank='"+bank+"'");
+			while(rs1.next())
+			{
+
+				System.out.println(rs1.getInt(1)+"--"+rs1.getString(2)+"--"+rs1.getString(3)+"--"+rs1.getInt(4)+"--"+rs1.getString(5));
+				
+
+			}
+		}
+		else
+		{
+			System.out.println("Invalid option");
+		}
+		s.close();
+		c.close();
+		
+	}
+}
+
+public class NandhiniSQL_2 {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+                //Registering Database Driver
+	        Class.forName("oracle.jdbc.driver.OracleDriver");  
+				
+	        //create  the connection 
+	        Connection c=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","root");  
+				
+                // create the statement  
+	        Statement s=c.createStatement();
+               //table creation
+               //s.executeQuery("create table bank(accid int,accname varchar2(20), accbank varchar2(20),accbalance int,accbranchcity varchar2(20))");
+				
+	        Record rec=new Record();
+	        rec.getRecords(s,c);
+				
+		
+           }
+
+}
+
