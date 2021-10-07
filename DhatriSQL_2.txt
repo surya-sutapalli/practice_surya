@@ -1,0 +1,48 @@
+package com.samp.JDBCC;
+import java.sql.*;
+import java.io.*;
+import java.util.Scanner;
+public class DhatriSQL_2 {
+	public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
+		Scanner sc=new Scanner(System.in);
+		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+		Connection c = DriverManager.getConnection("jdbc:sqlserver://localhost:1433;instance=DESKTOP-3439415","sa","welcome");
+		Statement s = c.createStatement();
+		s.execute("use test");
+		s.execute("create table bank(accid int,accname varchar(20),accbank varchar(20),accbalance int,accbranchcity varchar(20))");
+		s.execute("insert into bank values(101,'dhatri','hdfc',1000,'bangalore')");
+		s.execute("insert into bank values(102,'aditi','axis',2000,'chennai')");
+		s.execute("insert into bank values(103,'pooja','icici',3000,'pune')");
+		s.execute("insert into bank values(104,'aishwarya','hdfc',4000,'bangalore')");
+		s.execute("insert into bank values(105,'raj','axis',5000,'mumbai')");
+		s.execute("insert into bank values(106,'bhoomi','icici',6000,'pune')");
+		s.execute("insert into bank values(107,'brunda','hdfc',7000,'bangalore')");
+		s.execute("insert into bank values(108,'harshith','axis',8000,'chennai')");
+		s.execute("insert into bank values(109,'rachana','icici',9000,'bangalore')");
+		s.execute("insert into bank values(110,'bhavna','hdfc',10000,'delhi')");
+		System.out.println("enter the option\n 1.Select records by city\n 2.Select records by bank");
+		int n=sc.nextInt();
+		switch(n)
+		{
+		case 1:
+			System.out.println("Enter the City");
+			String city=sc.next();
+			ResultSet rs=s.executeQuery("select * from bank where accbranchcity='"+city+"'");
+			while(rs.next()) {
+				System.out.println(rs.getInt(1)+"----"+rs.getString(2)+"----"+rs.getString(3)+"----"+rs.getInt(4)+"-----"+rs.getString(5));
+			}
+			break;
+		case 2:
+			System.out.println("Enter the  bank name");
+			String bankname=sc.next();
+			ResultSet rs1=s.executeQuery("select * from bank where accbank='"+bankname+"'");
+			while(rs1.next()) {
+				System.out.println(rs1.getInt(1)+"----"+rs1.getString(2)+"----"+rs1.getString(3)+"----"+rs1.getInt(4)+"-----"+rs1.getString(5));
+			}
+			break;
+		}
+
+		s.close();
+		c.close();
+	}
+}
