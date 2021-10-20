@@ -1,11 +1,6 @@
-create a table bank
-accid
-accname
-accbank
-accbalance
-accbranchcity
+Write a Java Program Using Spring API to implement data injection
+using constructor.
 
-write a program to insert 10 records into bank table one after another
-1.accbank should be hdfc or axis or icici 
-2.accbalance should not be negative or zero
-3.accept 10 records data using Scanner
+POJO Class Name : Patient
+Attributes : patientID, patientName, patientDisease
+ 

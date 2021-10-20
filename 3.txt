@@ -1,20 +1,13 @@
-create a table bank
-accid
-accname
-accbank
-accbalance
-accbranchcity
+Create a table Patient with patientID,patientName,patientDisease and
+insert 5 records manually
 
-insert 10 records into bank table one after another manually
-1.accbank should be hdfc or axis or icici 
-2.accbalance should not be negative or zero
+Write a Java Program to implement Hibernate CRUD operations as below
 
-write a program to perform following deposit operation
+1.Insert : patientID,patientName,patientDisease
+2.Update : patientID,patientDisease
+3.Delete : patientID
 
-Input:
+Please select an Option(1/2/3):
 
-Enter Acc Id:  --> Please display account details
-                   Enter Amount to Deposit:
-                   Account Balance should be updated and display
-
-
+User has to provide input using Scanner and respective operation has to
+performed 

@@ -1,20 +1,5 @@
-create a table bank
-accid
-accname
-accbank
-accbalance
-accbranchcity
+Implement an example for dependency injection between any two POJO
+classes using Setters
 
-insert 10 records into bank table one after another manually
-1.accbank should be hdfc or axis or icici 
-2.accbalance should not be negative or zero
-
-write a program to perform following withdrawl operation
-
-Input:
-
-Enter Acc Id:  --> Please display account details
-                   Enter Amount to withdrawl:
-                   Account Balance should be updated and display
-
-
+Implement an example for dependency injection between any two POJO
+classes using Constructor

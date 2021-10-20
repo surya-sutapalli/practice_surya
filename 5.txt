@@ -1,23 +1,16 @@
-create a table bank
-accid
-accname
-accbank
-accbalance
-accbranchcity
+Implement an example of Spring JDBC for following fields
+Patient:
+  patientID
+  patientName
+  patientDisease
 
-write a program to perform following operations
+Input:
+ 
+1.Insert: patientID,patientName,patientDisease
+2.Update: patientID,patientDisease
+3.Delete: patientID
+4.Select All 
+Please select an Option(1/2/3/4):
 
-1.New Account
-2.Update Account: --> provide accid,amount
-3.Delete Account: --> provide accid
-4.Select Account: --> provide accid
-5.Exit
-
-Please select Option:5
-
-Do you want to continue:
-
-
-
-
-
+Based on User Input using Scanner the respective Operation has to be 
+performed.

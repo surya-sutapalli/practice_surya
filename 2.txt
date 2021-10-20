@@ -1,18 +1,8 @@
-create a table bank
-accid
-accname
-accbank
-accbalance
-accbranchcity
+Create a table Patient with patientID,patientName,patientDisease and
+insert 5 records manually
 
-insert 10 records into bank table one after another manually
-1.accbank should be hdfc or axis or icici 
-2.accbalance should not be negative or zero
-
-write a program to perform following operations
-
-1.Select records by city
-2.Select records by bank
-Please select option:
-
+Write a Java Program to implement Hibernate CRUD operation to select a 
+particular record by providing patientID as user input using scanner and
+display respective patient details. If patientID not existing then please
+display "No Patient found".
 
