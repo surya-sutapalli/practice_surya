@@ -1,16 +1,2 @@
-Implement an example of Spring JDBC for following fields
-Patient:
-  patientID
-  patientName
-  patientDisease
-
-Input:
- 
-1.Insert: patientID,patientName,patientDisease
-2.Update: patientID,patientDisease
-3.Delete: patientID
-4.Select All 
-Please select an Option(1/2/3/4):
-
-Based on User Input using Scanner the respective Operation has to be 
-performed.
+Create a custom tag "findvowels" with one attribute "name" and
+implement taglib to display vowels in a attribute value

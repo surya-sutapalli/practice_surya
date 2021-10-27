@@ -1,13 +1,5 @@
-Create a table Patient with patientID,patientName,patientDisease and
-insert 5 records manually
 
-Write a Java Program to implement Hibernate CRUD operations as below
-
-1.Insert : patientID,patientName,patientDisease
-2.Update : patientID,patientDisease
-3.Delete : patientID
-
-Please select an Option(1/2/3):
-
-User has to provide input using Scanner and respective operation has to
-performed 
+Create a Simple Angular App by taking a character variable in type script
+and try to find out whether character value is Vowel or Consonant using
+ngIf Directive
+             

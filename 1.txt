@@ -1,6 +1,8 @@
-Write a Java Program Using Spring API to implement data injection
-using constructor.
 
-POJO Class Name : Patient
-Attributes : patientID, patientName, patientDisease
- 
+Develop simple web application to accept a name with mix of uppercase
+letters , lower case letters , digits , special case characters and find
+out No of upper characters , No of lower case characters , No of Digits ,
+No of special case characters.
+
+Please handle exception handling if required and design HTML and Servlet
+in appropriate way by using CSS or Bootstrap

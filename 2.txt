@@ -1,8 +1,9 @@
-Create a table Patient with patientID,patientName,patientDisease and
-insert 5 records manually
 
-Write a Java Program to implement Hibernate CRUD operation to select a 
-particular record by providing patientID as user input using scanner and
-display respective patient details. If patientID not existing then please
-display "No Patient found".
+Create a HTML form having following fields and insert the values in 
+respective Database Table using Servlet or JSP
 
+Policy ID:                 
+Policy Name:	           
+Policy Amount:
+Policy Duration:
+             

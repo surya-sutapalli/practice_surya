@@ -1,5 +1,6 @@
-Implement an example for dependency injection between any two POJO
-classes using Setters
+Create a table login having 2 fields user and password
+Insert a record having values "guest" and "welcome"
 
-Implement an example for dependency injection between any two POJO
-classes using Constructor
+Create a HTML Login form to accept user & password and develop a Servlet
+or JSP to validate login success or failure based on login table details
+
